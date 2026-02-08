@@ -3,6 +3,7 @@ __all__ = [
     'hrx'
 ]
 
+#===
 def hr(char: str = None, size: int = None) -> None:
     if char is None:
         char = '-'
@@ -40,6 +41,15 @@ def hrx() -> None:
         size=80
     )    
     print()
+    
+def clean(string: str, funcs = None) -> str:
+    if not funcs:
+        funcs = [str.strip, str.lower]
+        
+    for func in funcs:
+        string = func(string)
+        
+    return string
     
 def title(string: str = None, char: str = None, width: int = None,
            spaces: int = None, return_val: bool = None) -> str:

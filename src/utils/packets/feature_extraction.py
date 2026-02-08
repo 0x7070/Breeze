@@ -5,6 +5,17 @@ __all__ = [
     'count',
 ]
 
+#===============
+# TODO: 
+# - packet_filter(packet, ignore, field) -> bool
+# - ???get_ips(pcap) -> dict
+# - ???pop_ips_from_item?
+# - get_unique_packets
+
+
+#===============
+
+#===
 def count(pcap: PacketList = None, fields: list = None) -> dict:
     """
     Short description of the function.
